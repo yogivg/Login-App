@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>:: Login App ::</title>
 	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script type="text/javascript" src="app/app.js"></script>
@@ -21,7 +22,7 @@
 					<a class="navbar-brand" href="#">WebSiteName</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a ui-sref="home">Home</a></li>
 					<li><a ui-sref="login">Login</a></li>
 					<li><a ui-sref="register">Regiser</a></li>
 					<li><a ui-sref="content">Content</a></li>
@@ -36,9 +37,13 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 
 <script type="text/javascript" src="css/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/angular-route.min.js"></script>
+
 <script type="text/javascript" src="app/route/route.js"></script>
 <script type="text/javascript" src="app/AuthService/AuthService.js"></script>
+<script type="text/javascript" src="app/login/loginController.js"></script>
+<script type="text/javascript" src="app/register/regController.js"></script>
+<script type="text/javascript" src="app/route/route.js"></script>
+
 
 </body>
 </html>

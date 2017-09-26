@@ -1,10 +1,14 @@
-app.controller("loginController", function($scope,$state,user,AuthService){
-                    	$scope.user = userCred;
-                        $scope.login = function(user) {
-                        	$state.go('login');
-                        };
-                        $scope.logout = function() {
-                        	userService.logout();
-                            $state.go('login', {}, {reload: true});
-                        };  
-                });
+app.controller("loginController", function($scope,$rootscope,$stateParams,$state,AuthService){
+    $rootscope.title = "This is Login Form";
+    $scope.formSubmit=function(){
+if(AuthService.login($scope.username,$scope.password)){
+    $scope.error = '';
+    $scope.username ='';
+    $scope.password = '';
+    $state.transitionTo('home');
+        }
+        else{
+            $scope.error = "Incorrect username/password";
+        }
+    } ;               	
+});

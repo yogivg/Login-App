@@ -1,28 +1,16 @@
 app.factory("AuthService", function(){
-    
-	var usersMock = {
-    	'testUser': {
-        	username: 'admin',
-            password: 'admin'
-        },
-        'testUser2': {
-        	username: 'yogi',
-            password: 'yogi'
-        }
-    };
-	var userService = {
-    	user: undefined,
-    	login: function(userCredentials) {
-        	// later --> $http.post('auth', userCredentials).then(...)
-            // for demo use local data
-            var user = usersMock[userCredentials.username]
-            userService.user = ( user && ( user.password == userCredentials.password ) ) ? 
-            	user : undefined;
-            return user;
-        },
-        logout: function() {
-        	userService.user = undefined;
-        }
+    var user = "admin";
+    var pwd = "admin";
+    var isAuthenticated = false;
+return{
+    login: function(username,password){
+        isAuthenticated = username===user && password===pwd;
+        return isAuthenticated;
+    },
+    isAuthenticated: function(){
+        return isAuthenticated;
     }
-    return userService;
+}
+    
+	
 });
