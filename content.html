@@ -1,1 +1,15 @@
-<h1>This is Content Page......!</h1>
+<div ng-app="myApp">
+    <div ng-controller="contentController">
+       <!-- <form class="form-inline">
+            <div class="form-group">
+                <label>Employee NO: </label>
+                <input type="text" class="form-control" ng-model="searchEmpno" />
+            </div>
+            <button class="btn btn-primary" ng-click="doSearch()">Search</button>
+        </form>
+        <hr>-->
+        <div ng-repeat="oEmp in Employees" class="col-md-4">
+            <div emp-details></div>
+        </div>
+    </div>
+</div>

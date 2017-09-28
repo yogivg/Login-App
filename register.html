@@ -1,26 +1,26 @@
-
+<div ng-controller="regController">
 <div class="container">
     <div class="row">
         <div class="form_bg">
-            <form>
-                 <h2 class="text-center">Login Page</h2>
+            <form ng-submit="regFormSubmit()" class="form">
+                 <h2 class="text-center">Registration Page</h2>
                 <br/>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="userid"ng-model="username" placeholder="UserName">
+                    <input type="text" class="form-control" id="userid"ng-model="username" placeholder="UserName"/>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" ng-model="password" placeholder="Password">
-                
-                    </div>
-                     <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" ng-model="confirm-password" placeholder="confirm-password">
-                
+                    <input type="password" class="form-control" id="pwd" ng-model="password" placeholder="Password" />
                     </div>
                     <br/>
-                   <div class="align-center">
-                <button type="submit" class="btn btn-default" id="login" ng-click="register()">Login</button>
+                    <div class="form-group">
+                    <input type="password" class="form-control" id="pwd1" ng-model="confirmPassword" placeholder="confirm-password"/>
                     </div>
+                    <br/>
+                <div class="align-center">
+                    <button type="submit" class="btn btn-default" id="register">Register</button>
+                </div>
             </form>
+            </div>
         </div>
-    </div>
 	</div>
+</div>

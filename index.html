@@ -5,9 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>:: Login App ::</title>
-	<script type="text/javascript" src="js/angular.min.js"></script>
-	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/toaster.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script type="text/javascript" src="app/app.js"></script>
 
@@ -30,19 +31,22 @@
 			</div>
 		</nav>
 	</div>
+	
+	<div ui-view></div>
+	<toaster-container></toaster-container>
 </div>
 
-<div ui-view></div>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
-
 <script type="text/javascript" src="css/bootstrap.min.js"></script>
+<!--<script type="text/javascript" src="js/angular-animate.min.js"></script>-->
+<script type="text/javascript" src="js/toaster.min.js"></script>
 
 <script type="text/javascript" src="app/route/route.js"></script>
 <script type="text/javascript" src="app/AuthService/AuthService.js"></script>
 <script type="text/javascript" src="app/login/loginController.js"></script>
 <script type="text/javascript" src="app/register/regController.js"></script>
-<script type="text/javascript" src="app/route/route.js"></script>
+<script type="text/javascript" src="app/content/contentController.js"></script>
 
 
 </body>

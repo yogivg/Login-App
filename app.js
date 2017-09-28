@@ -1,10 +1,11 @@
-var app = angular.module('myApp', ['ui.router']);
+var app = angular.module('myApp', ['ui.router','toaster']);
 
-app.run(function($rootscope,$location,$state,AuthService){
-    $rootscope.$on('$stateChangeStart', function(event, toState, toParam, fromState, fromParam){
-        console.log('state changed to :' +toState);
-    });
-    if(AuthService.isAuthenticated()){
-        $state.transitionTo('login');
-    }
-});
+// app.run(function($rootScope,$location,$state,AuthService){
+//     $rootScope.$on('$stateChangeStart', function(event, toState, toParam, fromState, fromParam){
+//         console.log('state changed to :' +toState);
+//     });
+//     if(AuthService.isAuthenticated()){
+//         $state.transitionTo('login');
+//     }
+// });
+

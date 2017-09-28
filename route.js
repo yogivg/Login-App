@@ -2,23 +2,25 @@ app.config(['$stateProvider','$urlRouterProvider', function($stateProvider,$urlR
     $urlRouterProvider.otherwise('login');
     $stateProvider
     .state('home', {
-        uri:'/home',
+        url:'/home',
         templateUrl:'app/home/home.html'
     })
     .state('login',{
-        uri:'/login',
+        url:'/login',
         templateUrl: 'app/login/login.html',
         controller:'loginController'
     })
     .state('register',{
-        uri:'/register',
-        templateUrl: 'app/register/register.login.html',
+        url:'/register',
+        templateUrl: 'app/register/register.html',
         controller:'regController'
     })
     .state('content', {
-        uri:'/content',
+        url:'/content',
         templateUrl: 'app/content/content.html',
         controller:'contentController'
     });
     
 }]);
+
+
